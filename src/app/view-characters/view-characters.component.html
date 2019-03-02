@@ -1,0 +1,34 @@
+<div class="container-fluid" style="text-align:center">
+  <div class="row" style="text-align:center">
+      <div class="col-md-12">
+          
+                <a class="btn btn-warning" (click)="goBackToPreviousPage()">Go Back </a>
+              </div>
+              <br><br><br>
+    <div class="col-md-12" style="font-size:18px">Displaying all details of the <span  style="cursor:pointer;"class="api_style" title="characaters"> Characters</span></div>
+    <br><br>
+    
+
+
+    <div *ngFor="let item of allData">
+        <div class="well well_style">URL: {{item.url}}</div>
+         <div class="well well_style">Name: {{item.name}}</div>
+         <div class="well well_style">Gender: {{item.gender}}</div>
+         <div class="well well_style">Culture: {{item.Culture}}</div>
+         <div class="well well_style">Born: {{item.born}}</div>
+         <div class="well well_style">Died: {{item.died}}</div>
+         <div class="well well_style">Titles: {{item.titles}}</div>
+         <div class="well well_style">Aliases: {{item.aliases}}</div>
+          <div class="well well_style">Father: {{item.father}}</div>
+          <div class="well well_style">Mother: {{item.mother}}</div>
+          <div class="well well_style">Spouse: {{item.spouse}}</div>
+          <div class="well well_style">Allegiances: {{item.allegiances}}</div>
+          
+          <div class="well well_style">No of Books this character is involved in are : {{item.books.length}}</div>
+          <div class="well well_style">No of povBooks this character involved is in are : {{item.povBooks.length}}</div>
+          <div class="well well_style">tvSeries: {{item.tvSeries}}</div>
+          <div class="well well_style">playedBy: {{item.playedBy}}</div>
+          
+        </div>
+  </div>
+ 

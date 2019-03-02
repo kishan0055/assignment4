@@ -1,0 +1,33 @@
+<div class="container-fluid" style="text-align:center">
+  <div class="row" style="text-align:center">
+      <div class="col-md-12">
+          
+                <a class="btn btn-warning" (click)="goBackToPreviousPage()">Go Back </a>
+              </div>
+              <br><br> 
+    <div class="col-md-12" style="font-size:22px">Books</div>
+    <br><br> 
+  </div>
+  <div class="row" style="text-align:center">
+    
+    <div>
+   
+      <br><br>
+      <div *ngFor="let book of allBooks"> 
+        <div id="books" class="col-md-4">
+          <div class="card red">
+              <h4 class="card-title">Books</h4>
+            <div class="card-header">{{book.name}}</div>
+            <div class="card-body">{{book.publisher}}</div> 
+            <div class="card-footer">{{book.released}} <br/><br/><a [routerLink]="['/view',book.url]" class="btn btn-primary">Details</a></div>
+        </div>
+      </div>
+          
+      </div>
+      <br/>
+    
+
+  </div>
+  
+
+</div>

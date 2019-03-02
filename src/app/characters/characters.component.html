@@ -1,0 +1,35 @@
+
+  <div class="container-fluid" style="text-align:center">
+    <div class="row" style="text-align:center">
+        <div class="col-md-12">
+            
+                  <a class="btn btn-warning" (click)="goBackToPreviousPage()">Go Back </a>
+                </div>
+                <br><br> 
+      <div class="col-md-12" style="font-size:22px">Characters</div>
+      <br><br> 
+    </div>
+  <div class="row" style="text-align:center">
+    <div>
+       
+      
+          <br><br>
+      <div *ngFor="let charac of allCharacters"> 
+        <div id="characters" class="col-md-4">
+          <div class="card green">
+              <h4 class="card-title">Characters</h4>
+              <div class="card-header"><div *ngIf="charac.name;else templateName">{{charac.name}}</div>
+              
+   <ng-template  #templateName>Game of thrones charcater.</ng-template></div>
+            <div class="card-body">{{charac.gender}}</div> 
+            <div class="card-footer">{{charac.culture}} <br/><br/><a [routerLink]="['/viewcharacters',charac.url]" class="btn btn-primary">Details</a></div>
+        </div>
+      </div>
+          
+      </div>
+      <br/>
+    
+
+  </div>
+
+</div>

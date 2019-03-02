@@ -1,0 +1,44 @@
+
+     <div class="container-fluid" style="text-align:center">
+         <div class="row" style="text-align:center">
+          <div *ngFor="let book of allBooks;let i=index"> 
+        <div id="books" class="col-md-4">
+        <div *ngIf="allBooks.length==10" class="card red">
+            <h4 class="card-title">Books</h4>
+            <div class="card-header">{{book.name}}</div>
+            <div class="card-body">{{book.publisher}}</div> 
+            <div class="card-footer">{{book.released}} <br/><br/><a [routerLink]="['/view',book.url]" class="btn btn-primary">Details</a></div>
+        
+          </div>
+      </div>
+        <div id="characters" class="col-md-4">
+        <div *ngIf="allCharacters" class="card green">
+            <h4 class="card-title">Characters</h4>
+            <div class="card-header"><div *ngIf="allCharacters[i].name;else templateName">{{allCharacters[i].name}}</div>
+           
+<ng-template  #templateName>Game of thrones charcater.</ng-template></div>
+            <div class="card-body">{{allCharacters[i].gender}}</div> 
+               <div class="card-footer">{{allCharacters[i].culture}} <br/><br/><a [routerLink]="['/viewcharacters',allCharacters[i].url]" class="btn btn-primary">Details</a></div> 
+            
+            </div>
+          </div>
+          <div id="houses" class="col-md-4">
+            <div *ngIf="allHouses.length==10" class="card blue">
+                <h4 class="card-title">Houses</h4>
+                <div class="card-header">{{allHouses[i].name}}</div>
+                <div class="card-body">{{allHouses[i].region}}</div> 
+                   <div class="card-footer">{{allHouses[i].words}}<br><br> <a [routerLink]="['/viewhouses',allHouses[i].url]" class="btn btn-primary">Details</a></div> 
+                
+                </div>
+              </div>
+          
+      </div>
+
+
+      <br/>
+    
+
+  </div>
+
+</div><br><br>
+<p class="vf">©2018 All rights reserved</p>

@@ -1,0 +1,20 @@
+.card{
+    margin-left:2vw;
+    margin-bottom: 2vh;
+    
+}
+.red{
+    border:2px solid rgb(92, 137, 205);
+}
+.green{
+    border:2px solid yellow;
+}
+.blue{
+    border:2px solid rgb(73, 185, 45);
+}
+
+.vf
+{
+    text-align: center;
+    color: red;
+}

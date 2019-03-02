@@ -1,0 +1,26 @@
+<div class="container-fluid" style="text-align:center">
+  <div class="row" style="text-align:center">
+      <div class="col-md-12">
+          
+                <a class="btn btn-warning" (click)="goBackToPreviousPage()">Go Back </a>
+              </div>
+              <br><br><br>
+    <div class="col-md-12" style="font-size:18px">Displaying all details of the <span  style="cursor:pointer;"class="api_style" title="Book"> Book</span></div>
+    <br><br>
+    
+
+
+    <div *ngFor="let item of allData">
+        <div class="well well_style">URL: {{item.url}}</div>
+         <div class="well well_style">Name: {{item.name}}</div>
+         <div class="well well_style">ISBN: {{item.isbn}}</div>
+         <div class="well well_style">Author: {{item.authors}}</div>
+         <div class="well well_style">Number Of Pages: {{item.numberOfPages}}</div>
+         <div class="well well_style">publisher: {{item.publisher}}</div>
+         <div class="well well_style">Country: {{item.country}}</div>
+         <div class="well well_style">Media Type: {{item.mediaType}}</div>
+          <div class="well well_style">Released: {{item.released}}</div>
+          <div class="well well_style">No of charcaters involved in {{item.name}} are : {{item.characters.length}}</div>
+          <div class="well well_style">No of povCharcaters involved in {{item.name}} are : {{item.povCharacters.length}}</div>
+    </div>
+  </div>

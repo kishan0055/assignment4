@@ -1,0 +1,33 @@
+<div class="container-fluid" style="text-align:center">
+  <div class="row" style="text-align:center">
+      <div class="col-md-12">
+          
+                <a class="btn btn-warning" (click)="goBackToPreviousPage()">Go Back </a>
+              </div>
+              <br><br><br>
+    <div class="col-md-12" style="font-size:18px">Displaying all details of the <span  style="cursor:pointer;"class="api_style" title="house"> House</span></div>
+    <br><br>
+    
+
+
+    <div *ngFor="let item of allData">
+        <div class="well well_style">URL: {{item.url}}</div>
+         <div class="well well_style">Name: {{item.name}}</div>
+         <div class="well well_style">Region: {{item.region}}</div>
+         <div class="well well_style">coatOfArms: {{item.coatOfArms}}</div>
+         <div class="well well_style">Words: {{item.words}}</div>
+         <div class="well well_style">Titles: {{item.titles}}</div>
+         <div class="well well_style">Seats: {{item.seats}}</div>
+         <div class="well well_style">Current Lord: {{item.currentLord}}</div>
+          <div class="well well_style">Heir: {{item.heir}}</div>
+          <div class="well well_style">Over Lord: {{item.overlord}}</div>
+          <div class="well well_style">Founded: {{item.founded}}</div>
+          <div class="well well_style">Founder: {{item.founder}}</div>
+          <div class="well well_style">Died Out: {{item.diedOut}}</div>
+          <div class="well well_style">Cadet Branches: {{item.cadetBranches}}</div>
+           <div class="well well_style">Ancestral Weapons: {{item.ancestralWeapons}}</div>
+           <div class="well well_style">Ancestral Weapons: {{item.ancestralWeapons}}</div>
+           <div class="well well_style">Sworn Members: {{item.swornMembers}}</div>
+        
+    </div>
+  </div>
